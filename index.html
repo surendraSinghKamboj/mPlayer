@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-control" content="private" />
+    <meta http-equiv="EXPIRES" content="Wed, 16 oct 2033 11:12:01 GMT" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Minni Player</title>
+</head>
+
+<body id="body">
+    <div class="head">
+        <nav class="title">Minni Player</nav>
+    </div>
+    <div class="mainbox">
+        <div class="title-name">
+            <marquee behavior="alternate">
+                <p id="name">ukulele-trip-version-60s-9893.mp3</p>
+            </marquee>
+        </div>
+        <div class="discmain"><img src="SVG/vinyl-record-svgrepo-com.svg" alt="Disc" id="disc"></div>
+        <div class="mic"><img src="SVG/mic-svgrepo-com.svg" alt="mic"></div>
+        <div class="timebar">
+            <div id="current">
+                <p id="cmin">00:</p>
+                <p id="csec">00</p>
+            </div>
+            <div id="duration">
+                <p id="dmin">00:</p>
+                <p id="dsec">00</p>
+            </div>
+        </div>
+        <div class="filebox">
+            <div class="uploadbox">
+                <label for="file-uploasd" class="custom-file-upload">
+                    <input type="file" name="client-file" id="get-files" onchange="fileUploader()">
+                </label>
+            </div>
+        </div>
+        <div class="progressbar">
+            <div id="progress">
+                <audio id="player" src="Music/ukulele-trip-version-60s-9893.mp3" loop></audio>
+            </div>
+            <div id="point"></div>
+        </div>
+        <div class="controls-container">
+            <div class="controls">
+                <div class="button previous" onclick="rewind()"><img src="SVG/previous.svg" alt="previous" width="24"
+                        height="24"></div>
+                <div class="button play" onclick="play()" id="play"><img src="SVG/play.svg" alt="play" width="24"
+                        height="24"></div>
+                <div class="button pause hide" onclick="pause()" id="pause"><img src="SVG/pause.svg" alt="pause"
+                        width="24" height="24"></div>
+                <div class="button next" onclick="forward()"><img src="SVG/next.svg" alt="forward" width="24"
+                        height="24"></div>
+            </div>
+        </div>
+    </div>
+    <div class="volumebox">
+        <div class="plus" onclick="plus()"><img src="SVG/plus.svg" alt="plus" width="24" height="24"></div>
+        <div class="minus" onclick="minus()"><img src="SVG/minus.svg" alt="minus" width="24" height="24"></div>
+        <div class="volumebarout">
+            <div class="volumebar" id="volumebar"></div>
+        </div>
+        <div class="speaker" onclick="muteunmute()"><img id="mute-unmute" src="SVG/speaker.svg" alt="speaker" width="24"
+                height="24">
+            <!-- <img src="SVG/mute.svg" alt="mute" width="24" height="24"> -->
+        </div>
+    </div>
+    <script>
+        if ("serviceWorker" in navigator) {
+            // register service worker
+            navigator.serviceWorker.register("sw.js")
+                .then(res => {
+                    console.info("Service Worker registered");
+                })
+                .catch(err => {
+                    console.error("Error in regitering SW", err);
+                })
+        } else {
+            console.log("Service Worker Not Supported");
+        }
+    </script>
+    <!-- Script Statr From here -->
+    <script src="Script/script.js"></script>
+</body>
+
+</html>

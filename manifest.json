@@ -1,0 +1,16 @@
+{
+    "name": "Minni Player",
+    "short_name": "Minni Player",
+    "start_url": "/index.html",
+    "scope": "/",
+    "icons": [
+      {
+        "src": "images/logo.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#65A844",
+    "background_color": "#65A844",
+    "display": "standalone"
+  }

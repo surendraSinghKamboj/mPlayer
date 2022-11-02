@@ -1,0 +1,211 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+@keyframes rot {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.head{
+    width: 100%;
+    height: 40px;
+    background-color: #65A844;
+}
+.title-name{
+    position: absolute;
+    width: 50%;
+    height: 40px;
+    padding: 2px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+    transform: translate(-50%,-50%);
+    left: 50%;
+    bottom: 150px;
+    overflow: hidden;
+}
+.title{
+    color: darkblue;
+    font-size: 30px;
+    margin-top: 1px;
+    text-align: center;
+}
+.div-main{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    position: absolute;
+}
+.discmain{
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 25%;
+}
+.disc{
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.discs{
+    position: absolute;
+    animation: rot 1.5s infinite cubic-bezier(0, 0, 0.51, 0.41);
+    left: 0%;
+    top: 0%;
+}
+.mic{
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 40%;
+    top: 35%;
+}
+.controls-container{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0%;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+}
+.button{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#name{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px;
+}
+#progress{
+    width: 1px;
+    height: 100%;
+    transition: all;
+    transition-duration: .2s;
+    background: linear-gradient(90deg, #65A844, rgb(22, 139, 22));
+}
+#point{
+    width: 6px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: rgb(0, 80, 4);
+    margin-left: -2px;
+}
+.progressbar{
+    width: 95%;
+    height: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 60px;
+    display: flex;
+}
+.timebar{
+    width: 95%;
+    height: 30px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 66px;
+    display: flex;
+}
+#current{
+    width: 150px;
+    height: 100%;
+    left: 1%;
+    display: flex;
+}
+p{
+    text-align: right;
+}
+#duration{
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    right: 1%;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+}
+.mainbox{
+    width: 100%;
+    height: 100%;
+}
+/* input[type="file"]{
+    display: none;
+} */
+.custom-file-upload{
+    border: 2px solid #65A844;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.filebox{
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 100px;
+    justify-content: center;
+}
+.hide{
+    display: none;
+}
+
+.volumebarout{
+    width: 100px;
+    height: 6px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    right: 5px;
+    bottom: 240px;
+    position: absolute;
+    border-radius: 2.5px;
+    background-color: red;
+}
+#volumebar{
+    width: 10px;
+    height: 6px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    right: 5px;
+    /* position: relative; */
+    border-radius: 2.5px;
+    background-color: green;
+    transition: all;
+    transition: .2s;
+    /* bottom: 0%; */
+}
+.plus{
+    right: 5px;
+    bottom: 200px;
+    position: absolute;
+    border-radius: 2.5px;
+}
+.minus{
+    right: 85px;
+    bottom: 200px;
+    position: absolute;
+    border-radius: 2.5px;
+}
+.speaker{
+    right: 115px;
+    bottom: 225px;
+    position: absolute;
+    border-radius: 2.5px;
+}
